@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard | SkyTrip Planner</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>SkyTrip Planner</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section class="weather-dashboard">
+
+        <div class="weather-left">
+           <div class="destination-options">
+    <h3>Select Destination:</h3>
+
+    <div class="destination-boxes">
+
+        <div class="category-select">
+            <select onchange="updateWeatherFromCategory(this.value)">
+    <option value="">Mountains</option>
+    <option value="Manali">Manali</option>
+    
+    <option value="Jaipur">Jaipur</option>
+    <option value="Kashmir">Kashmir</option>
+    <option value="Kerala">Kerala</option>
+</select>
+        </div>
+
+        <div class="category-select">
+            <select onchange="updateWeatherFromCategory(this.value)">
+    <option value="" selected disabled>Beach </option>
+    <option value="Goa">Goa</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Andaman">Andaman</option>
+    <option value="Pondicherry">Pondicherry</option>
+</select>
+        </div>
+
+        <div class="category-select">
+            <select onchange="updateWeatherFromCategory(this.value)">
+    <option value="" selected disabled>City</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Agra">Agra</option>
+    <option value="Udaipur">Udaipur</option>
+</select>
+        </div>
+
+    </div>
+</div>
+            <div class="main-weather-card">
+                <h2 id="city-name">Manali</h2>
+                <p class="temp" id="city-temp">12°C</p>
+                <p id="city-condition">❄ Snowy</p>
+                <p id="city-humidity">Humidity: 60%</p>
+                <p id="city-wind">Wind: 10 km/h</p>
+                <p>Humidity: 60%</p>
+                <p>Wind: 10 km/h</p>
+            </div>
+
+            <div class="forecast-strip">
+                <div class="forecast-box">Mon<br>12°</div>
+                <div class="forecast-box">Tue<br>11°</div>
+                <div class="forecast-box">Wed<br>10°</div>
+                <div class="forecast-box">Thu<br>9°</div>
+                <div class="forecast-box">Fri<br>8°</div>
+            </div>
+        </div>
+
+        <div class="weather-right">
+            <div class="advisory-card">
+    <h3>Travel Advisory</h3>
+    <p id="advice1">Carry warm clothes</p>
+    <p id="advice2">Best for sightseeing</p>
+    <p id="advice3">Avoid late-night travel</p>
+</div>
+
+<div class="mini-card">
+    <h3>Sunrise</h3>
+    <p id="sunrise-time">06:15 AM</p>
+</div>
+
+<div class="mini-card">
+    <h3>Sunset</h3>
+    <p id="sunset-time">06:45 PM</p>
+</div>
+        </div>
+
+    </section>
+<script src="script.js"></script>
+</body>
+</html>

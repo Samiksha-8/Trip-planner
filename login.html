@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SkyTrip Planner</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0f0f0f;
+            font-family: Segoe UI, sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .login-box {
+            background: #171717;
+            padding: 40px;
+            border-radius: 16px;
+            width: 340px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(59,130,246,0.15);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-box h1 {
+            margin: 0;
+            font-size: 32px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-box p {
+            color: #9ca3af;
+            margin: 10px 0 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background: #1f2937;
+            color: white;
+            outline: none;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input::placeholder {
+            color: #6b7280;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #2563eb, #9333ea);
+            color: white;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(59,130,246,0.4);
+        }
+
+        .skip-btn {
+            background: #1f2937;
+            color: #9ca3af;
+        }
+
+        .skip-btn:hover {
+            background: #2d2d2d;
+            color: white;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .signup-link a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h1>SkyTrip Planner</h1>
+    <p>Login to continue your journey</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="login-btn" onclick="loginUser()">Login</button>
+
+    <div class="signup-link">
+        No account? <a href="signup.html">Sign up</a>
+    </div>
+
+    <div class="footer">
+        Smart • Travel • Weather Based
+    </div>
+</div>
+
+<script>
+function loginUser() {
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value;
+
+    if (username === "" || password === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    if (username === "admin" && password === "1234") {
+        localStorage.setItem("skytrip_user", username);
+        window.location.href = "index.html";
+    } else {
+        alert("Invalid username or password");
+    }
+}
+
+function skipLogin() {
+    localStorage.setItem("skytrip_user", "guest");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,417 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+    min-height: 100vh;
+}
+/* navbar css */
+
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* hero css */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Destination css */
+
+.destinations {
+    padding: 40px 60px;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE/Edge */
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+}
+
+.card {
+    min-width: 280px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 10px;
+}
+
+
+/* weather css */
+
+.weather-section {
+    text-align: center;
+    padding: 60px 40px;
+    color: white;
+}
+
+.weather-section h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.weather-section p {
+    font-size: 18px;
+}
+
+.weather-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.weather-card {
+    width: 280px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-8px);
+}
+
+.weather-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.weather-card h3,
+.weather-card p {
+    padding: 5px 10px;
+}
+
+
+/* planner css */
+
+.planner-section h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.planner-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.planner-card {
+    width: 300px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.planner-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-title {
+    color: white;
+    margin: 30px 0 15px;
+    font-size: 28px;
+}
+
+.weather-dashboard {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    color: white;
+}
+
+.weather-left {
+    flex: 2;
+}
+
+.weather-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-weather-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.temp {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.forecast-strip {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.forecast-box {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.advisory-card,
+.mini-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+}
+.destination-options {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.destination-options h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.destination-boxes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-select select {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 180px;
+    backdrop-filter: blur(10px);
+}
+
+.category-select select option {
+    color: black;
+}
+
+.planner-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #111827;
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.modal-content h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.modal-content select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.planner-main-card {
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 35px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    text-align: left;
+}
+
+.planner-main-card h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.planner-main-card p {
+    font-size: 18px;
+    margin: 12px 0;
+}
+.planner-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 60px 20px;
+    overflow: hidden;
+    z-index: 1;
+    --bg-image: none;
+    text-align: center;
+    color: white;
+}
+.planner-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+    opacity: 0.6;
+
+    z-index: -2;
+}
+
+.planner-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.left-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+#welcome-user {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.nav-title {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    min-width: 250px;
+    justify-content: flex-end;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkyTrip Planner</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0f0f0f;
+            font-family: Segoe UI, sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .signup-box {
+            background: #171717;
+            padding: 40px;
+            border-radius: 16px;
+            width: 340px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(147,51,234,0.15);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .signup-box h1 {
+            margin: 0;
+            font-size: 32px;
+            background: linear-gradient(90deg, #9333ea, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .signup-box p {
+            color: #9ca3af;
+            margin: 10px 0 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background: #1f2937;
+            color: white;
+            outline: none;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input::placeholder {
+            color: #6b7280;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .signup-btn {
+            background: linear-gradient(135deg, #9333ea, #2563eb);
+            color: white;
+        }
+
+        .signup-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(147,51,234,0.4);
+        }
+
+        .login-link {
+            margin-top: 18px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .login-link a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-box">
+
+    <h1>Create Account</h1>
+    <p>Join SkyTrip Planner</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirm" placeholder="Confirm Password">
+
+    <button class="signup-btn" onclick="signupUser()">Sign Up</button>
+
+    <div class="login-link">
+        Already have an account? <a href="login.html">Login</a>
+    </div>
+
+    <div class="footer">
+        Smart • Travel • Weather Based
+    </div>
+
+</div>
+
+<script>
+function signupUser() {
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    if (username === "" || password === "" || confirm === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    if (password !== confirm) {
+        alert("Passwords do not match");
+        return;
+    }
+
+    alert("Account created successfully!");
+
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

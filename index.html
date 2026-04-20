@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Weather Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+    <div class="left-user">
+        <span id="welcome-user">Hi, User</span>
+        <div class="user-avatar" id="user-avatar">U</div>
+    </div>
+
+    <h2 class="nav-title">Trip Planner</h2>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+
+</nav>
+    <section class="hero">
+        <h1>Plan Your Perfect Journey</h1>
+        <p>Explore destinations with weather insights and smart travel planning</p>
+        <button onclick="openPlannerModal()">
+    Start Planning
+</button>
+    </section>
+
+    <section class="destinations">
+    <h2>Explore by Category</h2>
+
+    <h3 class="category-title">🏔 Mountains & Snow</h3>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/manali.jpg" alt="Manali">
+            <h3>Manali</h3>
+            <p>Snow • Hills • Adventure</p>
+        </div>
+
+        <div class="card">
+            <img src="images/shimla.jpg" alt="Shimla">
+            <h3>Shimla</h3>
+            <p>Cool weather • Scenic views</p>
+        </div>
+
+        <div class="card">
+            <img src="images/kashmir.jpg" alt="Kashmir">
+            <h3>Kashmir</h3>
+            <p>Valleys • Snow • Lakes</p>
+        </div>
+
+        <div class="card">
+            <img src="images/mussoorie.jpg" alt="Mussoorie">
+            <h3>Mussoorie</h3>
+            <p>Hills • Fog • Nature</p>
+        </div>
+        <div class="card">
+    <img src="images/nainital.jpg" alt="Nainital">
+    <h3>Nainital</h3>
+    <p>Lake • Hills • Cool weather</p>
+</div>
+
+<div class="card">
+    <img src="images/darjeeling.jpg" alt="Darjeeling">
+    <h3>Darjeeling</h3>
+    <p>Tea gardens • Hills</p>
+</div>
+
+<div class="card">
+    <img src="images/auli.jpg" alt="Auli">
+    <h3>Auli</h3>
+    <p>Skiing • Snow • Adventure</p>
+</div>
+
+<div class="card">
+    <img src="images/ladakh.jpg" alt="Ladakh">
+    <h3>Ladakh</h3>
+    <p>Mountains • Road trips</p>
+</div>
+    </div>
+
+    <h3 class="category-title">🏖 Beaches & Relaxation</h3>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/goa.jpg" alt="Goa">
+            <h3>Goa</h3>
+            <p>Sunny beaches • Warm weather</p>
+        </div>
+
+        <div class="card">
+            <img src="images/kerala.jpg" alt="Kerala">
+            <h3>Kerala</h3>
+            <p>Backwaters • Green views</p>
+        </div>
+
+        <div class="card">
+            <img src="images/andaman.jpg" alt="Andaman">
+            <h3>Andaman</h3>
+            <p>Blue sea • Island vibes</p>
+        </div>
+
+        <div class="card">
+            <img src="images/pondicherry.jpg" alt="Pondicherry">
+            <h3>Pondicherry</h3>
+            <p>French vibes • Beach town</p>
+        </div>
+        <div class="card">
+    <img src="images/lakshadweep.jpg" alt="Lakshadweep">
+    <h3>Lakshadweep</h3>
+    <p>Island • Blue waters</p>
+</div>
+
+<div class="card">
+    <img src="images/gokarna.jpg" alt="Gokarna">
+    <h3>Gokarna</h3>
+    <p>Peaceful beaches</p>
+</div>
+
+<div class="card">
+    <img src="images/alibaug.jpg" alt="Alibaug">
+    <h3>Alibaug</h3>
+    <p>Weekend beach trip</p>
+</div>
+
+<div class="card">
+    <img src="images/diu.jpg" alt="Diu">
+    <h3>Diu</h3>
+    <p>Beach • Heritage town</p>
+</div>
+    </div>
+
+    <h3 class="category-title">🏰 Heritage & Cities</h3>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/jaipur.jpg" alt="Jaipur">
+            <h3>Jaipur</h3>
+            <p>Culture • Palaces</p>
+        </div>
+
+        <div class="card">
+            <img src="images/delhi.jpg" alt="Delhi">
+            <h3>Delhi</h3>
+            <p>Capital • Monuments</p>
+        </div>
+
+        <div class="card">
+            <img src="images/agra.jpg" alt="Agra">
+            <h3>Agra</h3>
+            <p>Taj Mahal • Heritage</p>
+        </div>
+
+        <div class="card">
+            <img src="images/udaipur.jpg" alt="Udaipur">
+            <h3>Udaipur</h3>
+            <p>Lakes • Royal city</p>
+        </div>
+        <div class="card">
+    <img src="images/amritsar.jpg" alt="Amritsar">
+    <h3>Amritsar</h3>
+    <p>Golden Temple • Heritage</p>
+</div>
+
+<div class="card">
+    <img src="images/lucknow.jpg" alt="Lucknow">
+    <h3>Lucknow</h3>
+    <p>Nawabi culture • monuments</p>
+</div>
+
+<div class="card">
+    <img src="images/mysore.jpg" alt="Mysore">
+    <h3>Mysore</h3>
+    <p>Palaces • culture</p>
+</div>
+
+<div class="card">
+    <img src="images/varanasi.jpg" alt="Varanasi">
+    <h3>Varanasi</h3>
+    <p>Ghats • spiritual city</p>
+</div>
+    </div>
+    <div class="planner-modal" id="plannerModal">
+    <div class="modal-content">
+        <h2>Select Your Destination</h2>
+
+        <select id="planner-destination">
+            <option value="">Choose Destination</option>
+            <option value="Manali">Manali</option>
+            <option value="Goa">Goa</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Kashmir">Kashmir</option>
+            <option value="Kerala">Kerala</option>
+        </select>
+
+        <button onclick="goToPlanner()">Continue</button>
+    </div>
+</div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
